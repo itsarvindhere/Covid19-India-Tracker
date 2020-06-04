@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>COVID-19 India Tracker</title>
+        <meta name="description" content="A Simple COVID-19 Tracker for India">
+        <meta name="viewport" content="width=device-width, initial-scale=1">        
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;900&display=swap" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+      </head>
+    <body>
+
+      <div class="container-fluid">
+        
+            <header class="header">
+              <h1 class="header-heading display-4">COVID-19 INDIA TRACKER</h1>
+              <p class=" header-paragraph lead">India is fighting back against COVID-19 & this Simple yet useful COVID-19 Tracker will help you know how many Total Cases currently are in the country, how many have recovered and how many have died. </p>
+            </header>  
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+
+                <!-- CONFIRMED CASES CARD -->
+                <div class="col-lg-3 d-flex justify-content-center">
+                    <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                        <div class="card-heading card-header text-center">CONFIRMED</div>
+                        <div class="card-body">
+                          <p class="confirmed card-text text-center">&nbsp;</p>
+                        </div>
+                      </div>
+                </div>
+
+                <!-- ACTIVE CASES -->
+
+                <div class="col-lg-3 d-flex justify-content-center">
+                    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                        <div class="card-heading card-header text-center">ACTIVE</div>
+                        <div class="card-body">
+                          <p class="active card-text text-center">&nbsp;</p>
+                        </div>
+                      </div>
+                </div>
+
+                
+                <!-- RECOVERED CASES CARD -->
+
+                <div class="col-lg-3 d-flex justify-content-center">
+                    <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                        <div class="card-heading card-header text-center">RECOVERED </div>
+                        <div class="card-body">
+                          <p class="recovered card-text text-center">&nbsp;</p>
+                        </div>
+
+                </div>
+            </div>
+                
+                 
+
+                <!-- DEATHS CARD -->
+                <div class="col-lg-3 d-flex justify-content-center">
+                <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+                    <div class="card-heading card-header text-center">DEATHS</div>
+                    <div class="card-body">
+                      <p class="deaths card-text text-center">&nbsp;</p>
+                    </div>
+                  </div>
+                  </div>
+
+                
+    </div>
+        </div>
+
+
+        <div class="chart-container container-fluid">
+          <h2 class="text-center"> DATA VISUALIZED </h2>
+          <canvas id="confirmedChart" width="400" height="400"></canvas>
+          
+        </div>
+
+
+        <div class="table-container container-fluid">
+          <h2 class="text-center"> REGION-WISE TALLY </h2>
+
+            <table class="table table-dark">
+              <thead >
+                <tr>
+                  <th scope="col">Region</th>
+                  <th scope="col">Confirmed Cases</th>
+                  <th scope="col">Active Cases</th>
+                  <th scope="col">Recovered</th>
+                  <th scope="col">Deaths</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr> -->
+              </tbody>
+            </table>          
+        </div>
+
+
+        <div class="container-fluid">
+          <footer>
+            &copy; Arvind Rana | 2020
+          </footer>
+        </div>
+        
+        
+         
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+         <script src="app.js"></script>
+    </body>
+</html>
