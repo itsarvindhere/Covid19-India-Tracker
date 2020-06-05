@@ -14,23 +14,7 @@ $(document).ready(function(){
      $(".active").text(activeCases);
      $(".recovered").text(recoveredCases);  
      $(".deaths").text(deaths);
-
-    const stateNames = [];
-    const activeCaseArray = [];
-    const deathsArray = [];
-    const recoveredCaseArray = [];
-    const confirmedCaseArray = [];
-
-    for(var i = 1; i < data.statewise.length; i++){
-      stateNames.push(data.statewise[i].state);
-      activeCaseArray.push(data.statewise[i].active);
-      recoveredCaseArray.push(data.statewise[i].recovered);
-      confirmedCaseArray.push(data.statewise[i].confirmed);
-      deathsArray.push(data.statewise[i].deaths);
-
-    }
-
-     
+   
      for(var i = 1; i < data.statewise.length; i++){
          $("tbody").append(`<tr>
             <th scope="row">${data.statewise[i].state}</th>
