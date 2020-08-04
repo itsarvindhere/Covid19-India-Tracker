@@ -1,6 +1,8 @@
 $(document).ready(function(){
     
-   
+  function formatNumber(num) {
+  return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+}
   const url = "https://api.covid19india.org/data.json";
 
   $.get(url, function(data){
@@ -10,10 +12,10 @@ $(document).ready(function(){
      const confirmedCases = data.statewise[0].confirmed;
      const deaths = data.statewise[0].deaths;
 
-     $(".confirmed").text(confirmedCases);
-     $(".active").text(activeCases);
-     $(".recovered").text(recoveredCases);  
-     $(".deaths").text(deaths);
+     $(".confirmed").text(formatNumber(confirmedCases));
+     $(".active").text(formatNumber(activeCases));
+     $(".recovered").text(formatNumber(recoveredCases));  
+     $(".deaths").text(formatNumber(deaths));
    
      for(var i = 1; i < data.statewise.length; i++){
          $("tbody").append(`<tr>
