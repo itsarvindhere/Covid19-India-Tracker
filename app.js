@@ -20,10 +20,10 @@ $(document).ready(function(){
      for(var i = 1; i < data.statewise.length; i++){
          $("tbody").append(`<tr>
             <th scope="row">${data.statewise[i].state}</th>
-            <td>${data.statewise[i].confirmed}</td>
-            <td>${data.statewise[i].active}</td>
-            <td>${data.statewise[i].recovered}</td>
-            <td>${data.statewise[i].deaths}</td>
+            <td>${formatNumber(data.statewise[i].confirmed)}</td>
+            <td>${formatNumber(data.statewise[i].active)}</td>
+            <td>${formatNumber(data.statewise[i].recovered)}</td>
+            <td>${formatNumber(data.statewise[i].deaths)}</td>
           </tr>`);
      }
     
