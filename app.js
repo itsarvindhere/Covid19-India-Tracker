@@ -3,7 +3,7 @@ $(document).ready(function(){
   function formatNumber(num) {
   return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
 }
-  const url = "https://api.covid19india.org/data.json";
+  const url = "https://data.covid19india.org/data.json";
 
   $.get(url, function(data){
 
