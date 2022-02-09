@@ -18,13 +18,16 @@ $(document).ready(function(){
      $(".deaths").text(formatNumber(deaths));
    
      for(var i = 1; i < data.statewise.length; i++){
-         $("tbody").append(`<tr>
-            <th scope="row">${data.statewise[i].state}</th>
-            <td>${formatNumber(data.statewise[i].confirmed)}</td>
-            <td>${formatNumber(data.statewise[i].active)}</td>
-            <td>${formatNumber(data.statewise[i].recovered)}</td>
-            <td>${formatNumber(data.statewise[i].deaths)}</td>
-          </tr>`);
+       if(data.statewise[i].state !== 'State Unassigned'){
+        $("tbody").append(`<tr>
+        <th scope="row">${data.statewise[i].state}</th>
+        <td>${formatNumber(data.statewise[i].confirmed)}</td>
+        <td>${formatNumber(data.statewise[i].active)}</td>
+        <td>${formatNumber(data.statewise[i].recovered)}</td>
+        <td>${formatNumber(data.statewise[i].deaths)}</td>
+      </tr>`);
+       }
+         
      }
     
      var ctx = $('#confirmedChart')[0].getContext('2d');
